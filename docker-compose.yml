@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  wifi-login:
+    build: .
+    restart: always
+    # Le container écoute sur 8080
+    ports:
+      - "8080:8080"
+    environment:
+      # On laisse les vraies variables (API, token, etc.) à Dokploy
+      PYTHONUNBUFFERED: "1"
